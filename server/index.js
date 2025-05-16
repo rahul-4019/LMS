@@ -33,7 +33,10 @@ app.use("/api/v1/user", userRoute);
 app.use("/api/v1/course", courseRoute);
 app.use("/api/v1/purchase", purchaseRoute);
 app.use("/api/v1/progress", courseProgressRoute);
- 
+
+app.get("/", (req, res) => {
+    res.send("API is working fine!");
+});
  
 app.listen(PORT, () => {
     console.log(`Server listen at port ${PORT}`);
